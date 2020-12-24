@@ -1,0 +1,30 @@
+.flexbox {
+    display: flex;
+}
+
+.list {
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+.gallery {
+    margin: 40px 40px;
+}
+.gallery__image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+  
+.gallery__item {
+    width: calc((100% - 20px) / 3); 
+}
+
+.gallery__item + .gallery__item{
+ margin-left: 10px;
+
+}
+
+
