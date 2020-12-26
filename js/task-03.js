@@ -17,7 +17,7 @@ const images = [
   ];
 
   const galleryRef = document.querySelector('#gallery')
-  console.log(galleryRef)
+
 
   // const imageUpdate = image => {
        
@@ -43,7 +43,8 @@ const images = [
   const imageUpdate = image => {
        
     images.forEach(image => {
-      galleryRef.insertAdjacentHTML("beforeend", `<li class="gallery__item"><img class="gallery__image" src=${image.url} alt=${image.alt}></li>`)
+      galleryRef.insertAdjacentHTML("beforeend", `<li class="gallery__item">
+      <img class="gallery__image" src=${image.url} alt=${image.alt}></li>`)
       })
     
     return galleryRef
