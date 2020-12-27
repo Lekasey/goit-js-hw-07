@@ -40,14 +40,21 @@ const images = [
   // imageUpdate(images)
 
 
-  const imageUpdate = image => {
+  // const imageUpdate = image => {
        
-    images.forEach(image => {
-      galleryRef.insertAdjacentHTML("beforeend", `<li class="gallery__item">
-      <img class="gallery__image" src=${image.url} alt=${image.alt}></li>`)
-      })
+  //   images.forEach(image => {
+  //     `<li class="gallery__item">
+  //     <img class="gallery__image" src=${image.url} alt=${image.alt}></li>`)
+  //     })
     
-    return galleryRef
-  }
+  //   return galleryRef
+  // }
 
-  imageUpdate(images)
+  // imageUpdate(images)
+
+ const createGalleryItem = images.reduce((acc, img) => {
+   acc += `<li class="gallery__item"><img class="gallery__image" src="${img.url}" alt="${img.alt}"></li>`;
+   return acc
+  },``)
+ 
+ galleryRef.insertAdjacentHTML("beforeend", createGalleryItem)
